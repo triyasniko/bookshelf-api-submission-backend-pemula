@@ -63,7 +63,7 @@ const addBookHandler = (request, h) => {
         return response;
     }
     const response = h.response({
-        status: 'fail',
+        status: 'error',
         message: 'Buku gagal ditambahkan',
     });
     response.code(500);
@@ -187,7 +187,7 @@ const deleteBookByIdHandler = (request, h) => {
     }
     const response = h.response({
         status: 'fail',
-        message: 'Buku gagal dihapus',
+        message: 'Buku gagal dihapus. Id tidak ditemukan',
     });
     response.code(404);
     return response;
